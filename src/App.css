@@ -1,0 +1,48 @@
+.page {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  max-width: 800px;
+}
+
+main {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+
+form {
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+}
+
+.movies {
+  display: grid;
+  list-style: none;
+  margin: 0;
+  margin-top: 16px;
+  width: 100%;
+
+  /*Que pille el espacio disponible, como minimo 200px, cada vez que pueda ocupar 200px los ocupa con columna en un máximo de una fracción (todo el espacio disponible)*/
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+
+  /* Para separar entre elementos (mucho más simple que el padding) */
+  gap: 32px;
+}
+
+.movie {
+  text-align: center;
+}
+
+.movie h3,
+.movie p {
+  margin: 0;
+}
+
+.movie img {
+  border-radius: 8px;
+  margin-top: 16px;
+}
